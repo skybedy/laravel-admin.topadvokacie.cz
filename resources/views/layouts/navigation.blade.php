@@ -1,25 +1,31 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
+
+
+      <!-- Kvuli h-full childs prestalo fungovat items-center v tomto hlavnim <div> a muselo se dat primo do childs -->
+    <div class="flex justify-between h-16  mx-auto">
+
+            <div class="flex space-x-8 h-full items-center">
+
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('index') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
-                </div>
+                <a href="{{ route('index') }}" class="flex items-center h-full bg-slate-600 text-xl text-white font-black px-5">
+                    TOPADVOKACIE.CZ
+                </a>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
-                        {{ __('Smlouvy') }}
-                    </x-nav-link>
+                <div class="group relative">
+                    <a href="#" class="px-4 py-2 text-gray-700 hover:text-gray-900">Formuláře</a>
+                    <ul class="absolute left-0 mt-2 w-[44rem] bg-white border border-gray-300 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-opacity duration-200">
+                        <li><a href="{{ route('signature_verification.index') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Prohlášení o pravosti podpisu</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Kupní smlouvy</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Formuláře k provedení identifikace a kontroly klienta v souvislosti s advokátní úschovou</a></li>
+                    </ul>
                 </div>
+
             </div>
 
             <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
+            <div class="hidden sm:flex sm:items-center">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
@@ -61,7 +67,6 @@
                     </svg>
                 </button>
             </div>
-        </div>
     </div>
 
     <!-- Responsive Navigation Menu -->

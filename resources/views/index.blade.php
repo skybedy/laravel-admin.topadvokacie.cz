@@ -1,25 +1,9 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Hlavní strana') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    <table class="table-auto border-collapse w-full my-4 border border-black">
-                        <tr>
-                            <th class="border border-black px-4 py-2">ID</th>
-                            <th class="border border-black px-4 py-2">Název</th>
-                            <th class="border border-black px-4 py-2">Popis</th>
-                            <th class="border border-black px-4 py-2">Datum</th>
-                            <th class="border border-black px-4 py-2">Akce</th>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </x-app-layout>
