@@ -20,8 +20,8 @@ class SignatureVerificationController extends Controller
      */
     public function index()
     {
-a
-        return view('signature-verification.index',['signatureVerifications' => $this->model->getAll()]);
+
+        return view('signature-verification.index',['signatureVerifications' => $this->model->fetchAll()]);
     }
 
     /**
@@ -43,9 +43,10 @@ a
     /**
      * Display the specified resource.
      */
-    public function show(SignatureVerification $signatureVerification)
+    public function show(Request $request)
     {
-        //
+       // dd($this->model->fetchById($request->id));
+        return view('signature-verification.show',['customer' => $this->model->fetchById($request->id)]);
     }
 
     /**
