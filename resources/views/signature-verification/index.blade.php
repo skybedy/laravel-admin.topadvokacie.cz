@@ -98,6 +98,12 @@
                 </div>
 
                 <div>
+                    <label class="block text-gray-700 text-sm font-medium">Jméno</label>
+                    <input type="text" class="border border-gray-300 rounded-md w-full"  />
+                </div>
+
+
+                <div>
                     <label for="dob" class="block text-sm font-medium text-gray-700">Datum narození</label>
                     <input type="text" id="dob" name="dob"
                         placeholder="DD.MM.RRRR"
@@ -111,10 +117,6 @@
                 </div>
 
 
-                <div>
-                    <label class="block text-gray-700 text-sm font-medium">Jméno</label>
-                    <input type="text" class="border border-gray-300 rounded-md w-full"  />
-                </div>
 
                 <div>
                     <label class="block text-gray-700 text-sm font-medium">Ulice</label>

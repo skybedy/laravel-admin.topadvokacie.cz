@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SignatureVerificationController;
+use App\Http\Controllers\Web\ProfileController;
+use App\Http\Controllers\Web\SignatureVerificationController;
+use App\Http\Controllers\Api\CustomerAutocompleteController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,6 +24,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/', function () {
         return view('index');
     })->name('index');
+
+    //furt nevim, nechat to jako api, nebo to dat jako ajax..
+    Route::get('/api/autocomplete-customer', [CustomerAutocompleteController::class, 'search']);
+
+
+
 });
 
 require __DIR__.'/auth.php';

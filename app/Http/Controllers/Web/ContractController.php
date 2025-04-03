@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
-use App\Models\Contract;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ContractController extends Controller
