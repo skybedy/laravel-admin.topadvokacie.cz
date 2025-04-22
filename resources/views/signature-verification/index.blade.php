@@ -94,7 +94,7 @@
 
                 <div>
                     <label for="" class="block text-gray-700 text-sm font-medium">Příjmení</label>
-                    <input type="text" class="border border-gray-300 rounded-md w-full"  />
+                    <input type="text" name="lastname" class="border border-gray-300 rounded-md w-full"  />
                 </div>
 
                 <div>

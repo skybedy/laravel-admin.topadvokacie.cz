@@ -16,7 +16,7 @@ class CustomerAutocompleteController extends Controller
      */
     public function search(Customer $customer)
     {
-        dd($customer->searchCustomerForAutocomplete("bla"));
+        dd($customer->searchCustomerForAutocomplete("bo"));
     }
 
 

@@ -19,9 +19,9 @@ class Customer extends Model
      */
     public function searchCustomerForAutocomplete($lastname)
     {
-        $sql = "SELECT * FROM customers c WHERE c.lastname LIKE '%{?}%'";
+        $sql = "SELECT * FROM customers c WHERE c.lastname LIKE ?";
 
-        return DB::select($sql,['s']);
-        //return "hoj";
+        return DB::select($sql,["$lastname%"]);
+
     }
 }
