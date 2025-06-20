@@ -16,6 +16,17 @@ class SignatureVerificationController extends Controller
        $this->model = $model;
     }
 
+   
+    /**
+    * Display rozcestnik
+    */
+    public function home()
+    {
+
+        return view('signature-verification.home');
+    }
+   
+   
     /**
      * Display a listing of the resource.
      */

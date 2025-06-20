@@ -13,6 +13,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+     Route::get('/overeni-podpisu/home', [SignatureVerificationController::class, 'home'])->name('signature_verification.home');
     Route::get('/overeni-podpisu', [SignatureVerificationController::class, 'index'])->name('signature_verification.index');
     Route::get('/overeni-podpisu/show/{id}', [SignatureVerificationController::class, 'show'])->name('signature_verification.show');
     Route::get('/overeni-podpisu/create', [SignatureVerificationController::class, 'create'])->name('signature_verification.create');

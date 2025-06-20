@@ -13,11 +13,16 @@
             <tbody>
                 <tr>
                     <td class="p-1 border border-gray-300">Jméno a příjmení:</td>
-                    <td colspan="2" class="p-1 border border-gray-300">Ing. Lenka Boydová</td>
+                    <td colspan="2" class="p-1 border border-gray-300">
+                        @if(!empty($customer[0]->title))
+                            {{ $customer[0]->title ." " }}
+                        @endif
+                         {{ $customer[0]->firstname }} {{ $customer[0]->lastname }} 
+                    </td>
                 </tr>
                 <tr>
                     <td class="p-1 border border-gray-300">Datum narození:</td>
-                    <td colspan="2" class="p-1 border border-gray-300">27.9.1972</td>
+                    <td colspan="2" class="p-1 border border-gray-300">{{ $customer[0]->date_of_birth }}</td>
                 </tr>
                 <tr>
                     <td class="p-1 border border-gray-300">Místo narození:</td>

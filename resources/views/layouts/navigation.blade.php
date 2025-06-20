@@ -16,7 +16,7 @@
                 <div class="group relative">
                     <a href="#" class="px-4 py-2 text-gray-700 hover:text-gray-900">Formuláře</a>
                     <ul class="absolute left-0 mt-2 w-[44rem] bg-white border border-gray-300 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-opacity duration-200">
-                        <li><a href="{{ route('signature_verification.index') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Prohlášení o pravosti podpisu</a></li>
+                        <li><a href="{{ route('signature_verification.home') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Prohlášení o pravosti podpisu</a></li>
                         <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Kupní smlouvy</a></li>
                         <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Formuláře k provedení identifikace a kontroly klienta v souvislosti s advokátní úschovou</a></li>
                     </ul>
