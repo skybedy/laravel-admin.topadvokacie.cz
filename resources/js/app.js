@@ -1,7 +1,4 @@
 import './bootstrap';
+import signatureForm from './signatureForm';
 
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-
-Alpine.start();
+signatureForm(); // spustí logiku po načtení

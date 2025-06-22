@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable()->default(null);
+            $table->string('title_before')->nullable()->default(null);
             $table->string('firstname');
             $table->string('lastname');
+            $table->string('title_after')->nullable()->default(null);
             $table->string('street');
             $table->string('city');
             $table->string('postcode');
