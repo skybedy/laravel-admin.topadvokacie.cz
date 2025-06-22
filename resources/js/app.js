@@ -1,4 +1,3 @@
 import './bootstrap';
-import signatureForm from './signatureForm';
+import './signatureForm';
 
-signatureForm(); // spustí logiku po načtení

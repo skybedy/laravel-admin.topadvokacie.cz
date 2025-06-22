@@ -11,9 +11,9 @@
             </div>
         </div>
         <div class="p-1">
-            <form id="signature-form" class="flex justify-center space-x-2 mt-10" style="display: none;">
+            <form id="signature-form"  action="{{ route('signature_verification.store') }}" method="POST" class="max-w-xl mx-auto space-y-6 mt-10 hidden">    
+                @csrf
                 <div id="signature-blocks" class="flex space-x-2"></div>
-
                 <!-- Odesílací tlačítko -->
                 <div class="flex justify-center">
                     <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
@@ -95,5 +95,10 @@
   </div>
 </template>
 
+<template id="suggestion-template">
+  <div class="suggestion-item cursor-pointer hover:bg-gray-100 px-2 py-1">
+    <strong class="name"></strong> <span class="dob text-gray-500 text-sm"></span>
+  </div>
+</template>
 
 
