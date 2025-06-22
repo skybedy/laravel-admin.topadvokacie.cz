@@ -3,20 +3,21 @@ const signatureForm = () => {
   const showButton = document.getElementById('show-form');
   const form = document.getElementById('signature-form');
   const template = document.getElementById('signature-template');
+  const blocksWrapper = document.getElementById('signature-blocks');
 
   const updateForm = () => {
     const count = Math.min(parseInt(countInput.value, 10) || 1, 4);
-    form.innerHTML = '';
+    blocksWrapper.innerHTML = '';
     form.style.display = 'flex';
 
     for (let i = 0; i < count; i++) {
       const clone = template.content.cloneNode(true);
-      form.appendChild(clone);
+      blocksWrapper.appendChild(clone);
     }
   };
 
   showButton.addEventListener('click', updateForm);
-  countInput.addEventListener('input', updateForm); // 👈 přidá dynamické vykreslení
+  countInput.addEventListener('input', updateForm);
 };
 
 export default signatureForm;
