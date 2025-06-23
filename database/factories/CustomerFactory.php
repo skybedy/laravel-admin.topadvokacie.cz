@@ -32,8 +32,8 @@ class CustomerFactory extends Factory
             'street' => $this->faker->streetAddress,
             'city' => $this->faker->city,
             'postcode' => $this->faker->postcode,
-            'place_of_birth' => $this->faker->city,
-            'date_of_birth' => $this->faker->date,
+            'pob' => $this->faker->city,
+            'dob' => $this->faker->date,
             'created_at' => now(),
             'updated_at' => now(),
         ];

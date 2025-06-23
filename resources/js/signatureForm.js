@@ -22,6 +22,7 @@ const initSignatureForm = () => {
   countInput.addEventListener('input', updateForm);
 };
 
+
 const initLiveSearchMultiple = () => {
   let debounceTimeout;
   const suggestionTemplate = document.getElementById('suggestion-template');
@@ -43,14 +44,7 @@ const initLiveSearchMultiple = () => {
     }
 
     debounceTimeout = setTimeout(() => {
-      fetch('/search-users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
-        },
-        body: JSON.stringify({ lastname: query })
-      })
+      fetch(`/api/autocomplete-customer?lastname=${encodeURIComponent(query)}`)
         .then(res => res.json())
         .then(users => {
           suggestionBox.innerHTML = '';

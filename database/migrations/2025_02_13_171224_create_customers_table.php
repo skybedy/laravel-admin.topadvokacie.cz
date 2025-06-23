@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('street');
             $table->string('city');
             $table->string('postcode');
-            $table->string('place_of_birth');
-            $table->date('date_of_birth');
+            $table->string('pob');
+            $table->date('dob');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));        });
     }
