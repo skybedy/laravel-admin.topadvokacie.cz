@@ -24,7 +24,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             CustomerSeeder::class,
-            BooksOnSignatureAuthenticityDeclarationsSeeder::class,
+            //BooksOnSignatureAuthenticityDeclarationsSeeder::class,
+            DocumentTypeSeeder::class
         ]);
     }
 }

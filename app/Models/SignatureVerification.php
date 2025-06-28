@@ -27,7 +27,7 @@ class SignatureVerification extends Model
     public function fetchById($id)
     {
         $sql = "SELECT
-                    b.id,DATE_FORMAT(b.signature_created_date, '%e.%c.%Y') AS formatted_signature_created_date ,c.firstname,c.lastname,DATE_FORMAT(c.date_of_birth, '%e. %c. %Y') AS date_of_birth,c.title
+                    b.id,DATE_FORMAT(b.signature_created_date, '%e.%c.%Y') AS formatted_signature_created_date ,c.firstname,c.lastname,DATE_FORMAT(c.dob, '%e. %c. %Y') AS dob,c.title_before
                 FROM
                      $this->table b, customers c
                 WHERE

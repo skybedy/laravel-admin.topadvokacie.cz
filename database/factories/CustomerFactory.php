@@ -34,6 +34,9 @@ class CustomerFactory extends Factory
             'postcode' => $this->faker->postcode,
             'pob' => $this->faker->city,
             'dob' => $this->faker->date,
+            'gender' => $this->faker->randomElement(['M', 'Z']),
+            'document_type' => $this->faker->randomElement([1, 2]),
+            'document_number' => (string) $this->faker->numberBetween(100000, 99999999),
             'created_at' => now(),
             'updated_at' => now(),
         ];
