@@ -21,6 +21,9 @@
                         <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Formuláře k provedení identifikace a kontroly klienta v souvislosti s advokátní úschovou</a></li>
                     </ul>
                 </div>
+                <div>
+                    <a href="#" class="px-4 py-2 text-gray-700 hover:text-gray-900">Klienti</a>
+                </div>
 
             </div>
 
