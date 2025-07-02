@@ -25,14 +25,18 @@ class CustomerFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->randomElement(['Mr.', 'Mrs.', 'Ms.', 'Dr.', null]),
+            'title_before' => $this->faker->randomElement(['Mr.', 'Mrs.', 'Ms.', 'Dr.', null]),
             'firstname' => $this->faker->firstName,
             'lastname' => $this->faker->lastName,
+            'title_after' => $this->faker->randomElement(['Mr.', 'Mrs.', 'Ms.', 'Dr.', null]),
             'street' => $this->faker->streetAddress,
             'city' => $this->faker->city,
             'postcode' => $this->faker->postcode,
-            'place_of_birth' => $this->faker->city,
-            'date_of_birth' => $this->faker->date,
+            'pob' => $this->faker->city,
+            'dob' => $this->faker->date,
+            'gender' => $this->faker->randomElement(['M', 'Z']),
+            'document_type' => $this->faker->randomElement([1, 2]),
+            'document_number' => (string) $this->faker->numberBetween(100000, 99999999),
             'created_at' => now(),
             'updated_at' => now(),
         ];

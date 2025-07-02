@@ -14,9 +14,16 @@ class CustomerAutocompleteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function search(Customer $customer)
+    public function search(Request $request, Customer $customer)
     {
-        dd($customer->searchCustomerForAutocomplete("bo"));
+        
+
+
+        $query = $request->input('lastname');
+
+        return $customer->searchCustomerForAutocomplete($query);
+
+   
     }
 
 

@@ -19,7 +19,7 @@ class Customer extends Model
      */
     public function searchCustomerForAutocomplete($lastname)
     {
-        $sql = "SELECT * FROM customers c WHERE c.lastname LIKE ?";
+        $sql = "SELECT *, DATE_FORMAT(c.dob, '%d.%m.%Y') AS dob_format FROM customers c WHERE c.lastname LIKE ?";
 
         return DB::select($sql,["$lastname%"]);
 
