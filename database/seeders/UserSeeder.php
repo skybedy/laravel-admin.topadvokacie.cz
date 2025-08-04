@@ -17,6 +17,12 @@ class UserSeeder extends Seeder
             'name' => 'skybedy',
             'email' => 'skybedy@gmail.com',
             'password' => Hash::make(env('DEFAULT_USER_PASSWORD')),
+        ],
+        [
+            'name' => 'Filip',
+            'email' => 'info@topadvokacie.cz',
+            'password' => Hash::make(env('FILIP_PASSWORD')),
         ]);
+
     }
 }
