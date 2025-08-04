@@ -1,5 +1,5 @@
 const initSignatureForm = () => {
-  const countInput = document.getElementById('signature-count');
+  //const countInput = document.getElementById('signature-count');
   const showButton = document.getElementById('show-form');
   const form = document.getElementById('signature-form');
   const template = document.getElementById('signature-template');
@@ -82,7 +82,7 @@ const updateForm = () => {
 
 
   showButton.addEventListener('click', updateForm);
-  countInput.addEventListener('input', updateForm);
+  //countInput.addEventListener('input', updateForm);
   document.addEventListener('click', handleDocumentClick) 
   
 };

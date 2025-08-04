@@ -7,9 +7,9 @@
     
     <div class="p-6 flex flex-col justify-center items-center">
       <div class="flex items-center space-x-2">
-        <label for="signature-count" class="text-sm font-medium">Počet podpisů:</label>
+     <!--<label for="signature-count" class="text-sm font-medium">Počet podpisů:</label>
         <input type="number" id="signature-count" min="1" max="4" value="1"
-               class="border border-gray-300 rounded p-2 w-20 text-center">
+               class="border border-gray-300 rounded p-2 w-20 text-center">-->
         <button type="button" id="show-form"
                 class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
           Přidat ověření podpisu
